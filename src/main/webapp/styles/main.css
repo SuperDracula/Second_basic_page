@@ -1,0 +1,40 @@
+div {
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+img#logo {
+    width: 100px;
+    height: 100px;
+}
+
+h1,
+h2 {
+    color: rgb(4, 174, 174);
+}
+
+label {
+    float: left;
+    min-width: 15em;
+    margin-bottom: 0.5em;
+}
+
+input[type="text"], input[type="email"], input[type="date"] {
+    width: 15em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+br {
+    clear: both;
+}
+
+#submit {
+    margin-left: 0.5em;
+}

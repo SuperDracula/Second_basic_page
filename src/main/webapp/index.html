@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Murach's Java Servlets and JSP</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+</head>
+<body>
+<img src="./murach.png" alt="Murach logo" id="logo">
+<h1>SURVEY</h1>
+<p>If you have a moment, we'd appreciate it if you would fill out this <br> survey</p>
+<form action="emailList" method="post">
+    <h2>Your information</h2>
+
+    <input type="hidden" name="action" value="add">
+
+    <label>Email:</label>
+    <input type="email" name="email" required><br>
+
+    <label>First Name:</label>
+    <input type="text" name="firstName" required><br>
+
+    <label>Last Name:</label>
+    <input type="text" name="lastName" required><br>
+
+    <label>Date of Birth:</label>
+    <input type="date" name="dob" required><br>
+
+    <h2>How did you hear about us?</h2>
+    
+    <input type="radio" name="hear" value="Search engine"> Search engine
+    <input type="radio" name="hear" value="Word of mouth"> Word of mouth
+    <input type="radio" name="hear" value="Social media"> Social media
+    <input type="radio" name="hear" value="Other"> Other
+
+    <h2>Would you like to receive announcements <br>
+        about new CDs and special offers?</h2>
+    <input type="checkbox" name="yes1" checked> Yes, I'd like that<br>
+    <input type="checkbox" name="yes2"> Yes, please send me the email announcements<br>
+    
+    <label>Please contact me by: </label>
+    <select name="contactMethod" multiple>
+        <option value="email">Email only</option>
+        <option value="postmail">Postmail only</option>
+        <option value="both">Email or Postmail</option>
+    </select><br>
+
+    <input type="submit" value="Join Now" id="submit">
+
+</form>
+</body>
+</html>
