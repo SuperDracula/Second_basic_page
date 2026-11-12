@@ -21,6 +21,11 @@ public class EmailListServlet extends HttpServlet  {
 
         // get current action
         String action = request.getParameter("action");
+
+        System.out.println("Action: " + action);
+
+        log("EmailListServlet - action: " + action);
+
         if (action == null) {
             action = "join";  // default action
         }
