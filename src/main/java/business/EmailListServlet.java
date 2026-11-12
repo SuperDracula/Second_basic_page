@@ -4,8 +4,8 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import business.User;
-import business.Survey;
+import model.User;
+import model.Survey;
 
 public class EmailListServlet extends HttpServlet  {
 
