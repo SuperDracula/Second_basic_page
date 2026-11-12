@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>EmailListServlet</servlet-name>
-        <servlet-class>email.EmailListServlet</servlet-class>
+        <servlet-class>business.EmailListServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>EmailListServlet</servlet-name>

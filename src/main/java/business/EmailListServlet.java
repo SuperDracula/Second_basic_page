@@ -1,4 +1,4 @@
-package email;
+package business;
 
 import java.io.*;
 import javax.servlet.*;
