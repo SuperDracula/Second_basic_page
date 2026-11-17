@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,5 +48,4 @@
 
     <input type="submit" value="Join Now" id="submit">
 </form>
-</body>
-</html>
+<%@include file="/footer.jsp" %>

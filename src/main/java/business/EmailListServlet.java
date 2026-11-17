@@ -3,6 +3,8 @@ package business;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
+import java.util.GregorianCalendar;
+import java.util.Calendar;
 
 import model.User;
 import model.Survey;
@@ -17,7 +19,7 @@ public class EmailListServlet extends HttpServlet  {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        String url = "/index.html";
+        String url = "/index.jsp";
 
         // get current action
         String action = request.getParameter("action");
@@ -32,10 +34,13 @@ public class EmailListServlet extends HttpServlet  {
 
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-            url = "/index.html";    // the "join" page
+            url = "/index.jsp";    // the "join" page
         }
         else if (action.equals("add")) {
             // get parameters from the request
+            GregorianCalendar currentDate = new GregorianCalendar();
+
+            int currentYear = currentDate.get(Calendar.YEAR);
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
@@ -66,7 +71,8 @@ public class EmailListServlet extends HttpServlet  {
             // set User object in request object and set URL
             request.setAttribute("user", user);
             request.setAttribute("survey", survey);
-            url = "/thanks.jsp";   // the "thanks" page
+            request.setAttribute("currentYear", currentYear);
+            url = "/survey.jsp";   // the "thanks" page
         }
 
         // forward request and response objects to specified URL
