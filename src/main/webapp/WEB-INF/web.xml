@@ -5,6 +5,18 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
 
+    <context-param>
+        <param-name>custServEmail</param-name>
+        <param-value>custserv@murach.com</param-value>
+    </context-param>
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <scripting-invalid>true</scripting-invalid>
+        </jsp-property-group>
+    </jsp-config>
+
     <servlet>
         <servlet-name>EmailListServlet</servlet-name>
         <servlet-class>business.EmailListServlet</servlet-class>

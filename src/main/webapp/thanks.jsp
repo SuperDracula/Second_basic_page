@@ -13,31 +13,37 @@
     <p>Here is the information that you entered:</p>
 
     <label>Email:</label>
-    <span>${user.email}</span><br>
+    <span>${sessionScope.user.email}</span><br>
 
     <label>First Name:</label>
-    <span>${user.firstName}</span><br>
+    <span>${sessionScope.user.firstName}</span><br>
 
     <label>Last Name:</label>
-    <span>${user.lastName}</span><br>
+    <span>${sessionScope.user.lastName}</span><br>
 
     <label>Date of Birth:</label>
-    <span>${user.dob}</span><br>
+    <span>${sessionScope.user.dob}</span><br>
 
     <label>How did you hear <br> about us?</label>
-    <span>${survey.hear}</span><br>
+    <span>${requestScope.survey.hear}</span><br>
 
     <label>Would you like to <br> receive announcements <br> about new CDs and <br> special offers?</label>
     <div>
-        <span>${survey.yes1}<br>${survey.yes2}<span>
+        <span>${requestScope.survey.yes1}<br>${requestScope.survey.yes2}</span>
     </div><br>
 
     <label>Contact Method:</label>
-    <span>${survey.contactMethod}</span><br>
+    <span>${requestScope.survey.contactMethod}</span><br>
 
-<p>To enter another email address, click on the Back
-    button in your browser or the Return button shown
-    below.</p>
+    <p>The first address on our list is ${sessionScope.users[0].email}<br>
+       The second address on our list is ${sessionScope.users[1].email}
+    </p>
+
+    <p>For customer service, contact ${initParam.custServEmail}</p>
+
+    <p>To enter another email address, click on the Back
+        button in your browser or the Return button shown
+        below.</p>
 
     <form action="" method="get">
         <input type="hidden" name="action" value="join">
